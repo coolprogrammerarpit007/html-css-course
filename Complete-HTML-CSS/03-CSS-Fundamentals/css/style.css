@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
+}
+
+.wrpper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* On Inline Elements only Horizontal (left and right) Margin and Padding can be applied not the top and the bottom  */
+
+nav a:link {
+  margin-left: 50px;
+}
+
+/* nav a:link:last-child {
+  margin-left: 0;
+} */
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+article {
+  margin-bottom: 60px;
+}
+.side-bar {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 100%;
+}
+
+/* Here, Elements Inside the element like strong and em element got also styled when there is not any style is used for them. This happens because of the effect of In-heritence effect. */
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+  text-align: center;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 22px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* 
+This is not a great Idea as there selector combination is complex to read so Instead we can use Id or Class selectors.
+ */
+/* footer p {
+  
+  font-size: 16px;
+} */ /*This is called a descandant selector */
+
+/* article header p {  
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+/* Pseudo-Classes In CSS
+ */
+
+/* So what this Pseudo selector does is that it will select all li elements which are the first child of it's parent element. */
+
+li:first-child {
+  font-weight: bold;
+}
+
+/* So what this Pseudo selector does is that it will select all li elements which are the last child of it's parent element. */
+
+li:last-child {
+  font-style: italic;
+}
+
+/* We can also select a Particular child elements of a Parent element like 2nd,3rd or any li element of a parent element. */
+
+/* li:nth-child(even) {
+} */
+
+/* This Pseudo-Selector will not work as p is not the first child of the parent article. Instead header is the first child but last-child pseudo-class will work as p is the last child of article element. The summary is that all that pseudo-class selectors not work perfectly well when there are multiple different elements are inside a parent element. All the child elements should be same for pseudo-elements to be work.
+ */
+/* 
+article p:first-child {
+  color: red;
+} */
+/* article p:last-child {
+  color: red;
+} */
+
+/* Styling The Hyperlinks */
+
+a:link {
+  /*this will select all a elements which have href  */
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: #000;
+  font-style: italic;
+}
+
+/* The Order of this pseudo classes should be this like: LVHA */
+
+/* Resolving Conflicts */
+/* You should write as much as simple selectors to not have an conflict Issue on selcting elements.. */
+
+/* #copyright {
+  color: red;
+}
+.copyright {
+  color: #1098ad;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+} */
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Styling The Images */
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Positioning The Button Element */
+
+button {
+  font-size: 22px;
+  padding: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  left: 650px;
+}
+
+/* Pseudo Elements are elements which are not in html but we still can use them. */
+
+.main-header h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* p::first-line {
+  color: red;
+} */
+
+/* Adjacent Sibling Selector are those in which a element is come just after a other one. */
+
+/* h3 + p {
+  color: green;
+} */
+
+/* Before and After Pseudo-Elements */
+/* Any pseudo element like ::after is a inline element and for we wanted to use box-model simpally we need to change it from inline to inline-block  */
+
+h2 {
+  /* background-color: orangered; */
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+/* Same works for ::before pseudo-element that time it will come as first before element. */

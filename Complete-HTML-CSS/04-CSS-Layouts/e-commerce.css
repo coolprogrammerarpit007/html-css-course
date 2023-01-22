@@ -1,0 +1,277 @@
+/* Styling The E-Commerce Cart Page */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+/* 
+.wrapper {
+  height: 100vh;
+} */
+
+article {
+  border: 5px solid #000;
+  width: 925px;
+  margin: 50px auto;
+}
+
+article > h2 {
+  background-color: #f7f7f7;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+}
+
+img {
+  margin-bottom: -10px;
+}
+
+.price {
+  font-size: 25px;
+}
+
+.service {
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  word-spacing: 4px;
+}
+
+article a:link,
+article a:visited {
+  color: black;
+  font-size: 16px;
+}
+
+article a:hover,
+article a:active {
+  text-decoration: none;
+}
+/* You Can not use mrgin on anchor links */
+article h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: square;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 15px;
+  border: none;
+}
+
+button:hover {
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  border-top: 4px solid #000;
+}
+
+/* Styling The Color-Pallete
+ */
+
+.color-pallete {
+  /* border: 3px solid red; */
+  margin-top: 5px;
+  padding-top: 16px;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.div1 {
+  background-color: #000;
+}
+.div2 {
+  background-color: #2f6ee2;
+}
+.div3 {
+  background-color: #ec2f2f;
+}
+.div4 {
+  background-color: #f0bf1e;
+}
+.div5 {
+  background-color: #90cc20;
+}
+.div6 {
+  background-color: #885214;
+}
+
+article > h2 {
+  /* background-color: orangered; */
+  position: relative;
+}
+
+h2::before {
+  content: "SALE";
+  background: #ec2f2f;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  left: -45px;
+  letter-spacing: 3px;
+}
+
+/* Layout Building of thee-commerce cart challenge using float  */
+/* article {
+  padding: 10px;
+} */
+/* .article-container {
+  /* border: 3px solid blue; */
+/* 
+.price {
+  border: 3px solid red;
+  float: left;
+}
+.service {
+  border: 3px solid green;
+  float: right;
+  margin-top: 10px;
+}
+
+.details .wardrobe {
+  clear: both;
+}
+
+.img {
+  float: left;
+  margin-right: 30px;
+}
+.details {
+  border: 3px solid blue;
+  width: 32%;
+  float: left;
+  margin-top: 50px;
+  margin-right: 0px;
+}
+
+.product-details {
+  border: 3px solid salmon;
+  width: 32%;
+  float: left;
+  padding-top: 20px;
+  padding-left: 25px;
+  margin-left: 40px;
+  line-height: 1.9;
+}
+
+article button {
+  clear: both;
+} */
+
+/*Layout design Using Flexbox */
+
+.priceandshipping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin: 30px auto;
+}
+
+.price {
+  margin-bottom: 0;
+  margin-left: 50px;
+}
+
+.service {
+  margin-bottom: 0;
+  margin-right: 100px;
+}
+
+/* Main Laout design using flebox */
+/* 
+.article-container {
+  display: flex;
+  gap: 10px;
+} */
+
+.row-ward {
+  margin-left: 60px;
+  margin: bottom 10px;
+}
+
+.img {
+  margin-bottom: -5px;
+}
+/* 
+.details {
+  flex: 0 0 300px;
+  flex: 1;
+} */
+/* 
+.product-details {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex: 1;
+}
+
+.product-details h3 {
+  margin-left: 12px;
+} */
+
+/* Laout design using css-grid */
+
+article {
+  display: grid;
+  grid-template-columns: 250px 2fr 1fr;
+  grid-column: 60px;
+}
+
+h2 {
+  grid-column: 1/-1;
+}
+/* 
+.img {
+}
+
+.details {
+}
+
+.product-details {
+  margin-left: 15px;
+} */
+
+button {
+  grid-column: 1/-1;
+}

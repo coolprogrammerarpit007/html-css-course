@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+      /* Main Color: #087f5b 
+GREY Color: #343a40
+*/
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      /* Placing The Container */
+      .wrapper {
+        margin: 0 auto;
+        width: 500px;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Styling The anchor links */
+      a:link,
+      a:visited {
+        color: #343a40;
+        font-size: 20px;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+      }
+
+      a:link:nth-child(4),
+      a:visited:nth-child(4) {
+        background-color: #087f5b;
+        color: #fff;
+      }
+
+      a:hover,
+      a:active {
+        background-color: #087f5b;
+        color: #fff;
+      }
+
+      /* Styling the dots */
+      span {
+        color: #343a40;
+      }
+
+      /* Styling The Icon Buttons */
+      button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #087f5b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+        color: #087f5b;
+        /* font-size: 50px; */
+      }
+
+      button:hover {
+        background-color: #087f5b;
+        color: #fff;
+        border: none;
+      }
+
+      .btn-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      /* 
+
+      Using And Selector
+
+      .link1.link2{ Here this selector means that it will select a element which has both these classes or not!!
+
+      }
+       */
+    </style>
+  </head>
+  <body>
+    <!-- Creating A Pagination Component for the Page -->
+    <div class="wrapper">
+      <button class="preevious-btn">
+        <svg
+          class="btn-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <span>...</span>
+      <a href="#">23</a>
+      <button class="next-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>

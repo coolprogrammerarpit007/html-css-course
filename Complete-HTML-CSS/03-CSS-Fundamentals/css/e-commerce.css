@@ -1,0 +1,151 @@
+/* Styling The E-Commerce Cart Page */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+article {
+  border: 5px solid #000;
+  width: 825px;
+  margin: 50px auto;
+}
+
+article > h2 {
+  background-color: #f7f7f7;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+}
+
+img {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.service {
+  color: #777;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+article a:link,
+article a:visited {
+  color: black;
+  font-size: 18px;
+}
+
+article a:hover,
+article a:active {
+  text-decoration: none;
+}
+/* You Can not use mrgin on anchor links */
+article h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: square;
+  font-size: 18px;
+  margin-left: 25px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 15px;
+  border: none;
+}
+
+button:hover {
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  border-top: 4px solid #000;
+}
+
+/* Styling The Color-Pallete
+ */
+
+.color-pallete {
+  /* border: 3px solid red; */
+  padding-top: 16px;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.div1 {
+  background-color: #000;
+}
+.div2 {
+  background-color: #2f6ee2;
+}
+.div3 {
+  background-color: #ec2f2f;
+}
+.div4 {
+  background-color: #f0bf1e;
+}
+.div5 {
+  background-color: #90cc20;
+}
+.div6 {
+  background-color: #885214;
+}
+
+article > h2 {
+  /* background-color: orangered; */
+  position: relative;
+}
+
+h2::before {
+  content: "SALE";
+  background: #ec2f2f;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  left: -45px;
+  letter-spacing: 3px;
+}
